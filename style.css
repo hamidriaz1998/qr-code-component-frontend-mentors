@@ -1,49 +1,70 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
-
+:root {
+    --white: hsl(0, 0%, 100%);
+    --slate-300: hsl(212, 45%, 89%);
+    --slate-500: hsl(216, 15%, 48%);
+    --slate-900: hsl(218, 44%, 22%);
+}
 body {
     margin: 0;
     padding: 0;
     font-family: "Outfit", sans-serif;
+    background-color: var(--slate-300);
 }
 
 .main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 98vh;
-    background-color: hsl(212, 45%, 89%);
+    min-height: 100vh;
 }
 
 .card {
-    height: auto;
-    width: 350px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
+    max-width: 320px;
+    background-color: var(--white);
+    border-radius: 20px;
+    padding: 16px;
     text-align: center;
     text-wrap: wrap;
-    padding: 0;
-    background-color: hsl(0, 0%, 100%);
-    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .card > img {
-    width: 300px;
-    height: auto;
-    padding: 20px;
-    border-radius: 20px;
+    width: 100%;
+    border-radius: 10px;
 }
+
 .card > h2 {
-    padding: 10px;
+    color: var(--slate-900);
     font-weight: 700;
-    margin: 0;
+    font-size: 22px;
+    margin: 24px 0 16px;
 }
+
 .card > p {
+    color: var(--slate-500);
     font-size: 15px;
-    padding: 10px;
     font-weight: 400;
-    margin: 0;
-    margin-bottom: 20px;
-    color: hsl(216, 15%, 48%);
+    margin: 0 0 24px;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 375px) {
+    .card {
+        max-width: 340px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .card {
+        max-width: 360px;
+    }
 }
